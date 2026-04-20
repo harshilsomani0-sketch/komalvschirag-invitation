@@ -1373,3 +1373,43 @@ h1, h2, h3, .name, .section-heading, .ampersand {
     padding: 15px;
     border-radius: 15px;
 }
+/* આખા પેજનું સેટિંગ */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #e8e3d9; /* બહારનો કલર (વૈકલ્પિક) */
+    height: 100dvh; /* Magic: ક્રોમ માટે ડાયનેમિક હાઈટ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* આખા પેજને સ્ક્ર્રોલ થતું રોકવા માટે */
+}
+
+/* પ્રોપર કન્ટેનર (Mobile Wrapper) */
+.mobile-proper-container {
+    width: 100%;
+    max-width: 420px; /* મોબાઈલની સાઈઝ */
+    height: 100dvh; 
+    background: var(--maroon); /* તમારી Ivory થીમ */
+    position: relative;
+    overflow-y: auto; /* ફક્ત કન્ટેનરની અંદર જ સ્ક્ર્રોલ થશે */
+    box-shadow: 0 0 20px rgba(0,0,0,0.15); /* કન્ટેનરને અલગ પાડવા શેડો */
+    display: flex;
+    flex-direction: column;
+}
+/* કાર્ડને બરાબર વચ્ચે ગોઠવવા */
+.intro-screen-card {
+    width: 88%;
+    margin: auto; /* ઉપર-નીચેથી બરાબર વચ્ચે લાવશે */
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--emerald); /* રોઝ ગોલ્ડ બોર્ડર */
+    border-radius: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    /* જો કન્ટેનર કરતા કાર્ડ નાનું રાખવું હોય તો: */
+    max-height: 85vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* લખાણ વચ્ચે સરખું અંતર રાખશે */
+}
